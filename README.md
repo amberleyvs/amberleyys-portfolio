@@ -40,9 +40,11 @@ lib/            Typed content loader, page metadata, nav helpers
 public/         Images, videos, resume
 styles/         Design tokens and global styles
 tests/          Vitest unit tests and Playwright browser tests
+worker.js       Cloudflare Worker that serves out/ and answers video range requests
 ```
 
 - `next build` exports plain HTML, CSS and JS into `out/`. There is no server or database.
+- On Cloudflare, `worker.js` serves files from `public/work/` and `public/off_work/` in byte ranges. iPhone Safari needs this to play video. Everything else is served as-is.
 - `lib/content.ts` loads the JSON in `content/` and gives it types. Components read from it, so changing text never means changing code.
 - `app/page.tsx` stacks the sections in order. Each section folder holds the section and the parts only it uses. Anything shared lives in `ui/`.
 - Components render on the server by default. Only the interactive parts run in the browser: the nav, typing text, train, project popup, See more and videos.

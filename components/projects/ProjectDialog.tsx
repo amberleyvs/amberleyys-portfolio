@@ -82,7 +82,7 @@ export function ProjectDialog({ project, open, onClose }: Props) {
                   poster={item.poster}
                   controls
                   playsInline
-                  preload="metadata"
+                  preload="none"
                   aria-label={item.alt}
                 />
               ) : (

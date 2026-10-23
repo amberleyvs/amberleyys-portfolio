@@ -21,3 +21,4 @@ playwright/.cache/
 .DS_Store
 *.log
 .vercel
+.wrangler/

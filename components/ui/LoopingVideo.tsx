@@ -32,7 +32,7 @@ export function LoopingVideo({ src, poster, className }: Props) {
       muted
       loop
       playsInline
-      preload="metadata"
+      preload="none"
       aria-hidden="true"
     />
   );

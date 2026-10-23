@@ -17,7 +17,7 @@
         "type": "video",
         "src": "/work/mysawit.mp4",
         "preview": "/work/mysawit-preview.mp4",
-        "poster": "/work/mysawit-poster.png",
+        "poster": "/work/mysawit-poster.jpg",
         "alt": "Screen recording of MySawit, starting on the Harvest Review page"
       }
     ],
@@ -46,7 +46,7 @@
         "type": "video",
         "src": "/work/movezz.mp4",
         "preview": "/work/movezz-preview.mp4",
-        "poster": "/work/movezz-poster.png",
+        "poster": "/work/movezz-poster.jpg",
         "alt": "Movezz promotional video"
       }
     ],
@@ -78,7 +78,7 @@
         "type": "video",
         "src": "/work/ride-hailing.mp4",
         "preview": "/work/ride-hailing-preview.mp4",
-        "poster": "/work/ride-hailing-poster.png",
+        "poster": "/work/ride-hailing-poster.jpg",
         "alt": "Screen recording of the ride-hailing platform, creating a new ride order"
       }
     ],
