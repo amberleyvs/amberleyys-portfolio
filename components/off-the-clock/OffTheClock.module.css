@@ -1,0 +1,155 @@
+.section {
+  margin-top: 112px;
+}
+
+.band {
+  padding: 44px var(--gutter) 0;
+  background: var(--pink-soft);
+}
+
+.bandInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px 40px;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-bottom: 28px;
+}
+
+.heading {
+  font-size: var(--fs-h2-band);
+  line-height: 1;
+  letter-spacing: var(--ls-heading);
+}
+
+.intro {
+  max-width: 300px;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 1.0625rem;
+}
+
+.platform {
+  height: 12px;
+  background-color: var(--pink);
+  background-image: radial-gradient(var(--ink) 2.5px, transparent 3px);
+  background-size: 14px 12px;
+  border-bottom: var(--border-thick) solid var(--ink);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  padding-top: 44px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 6px solid var(--white);
+  outline: var(--border) solid var(--butter-line);
+  background: var(--butter);
+  box-shadow: 0 6px 16px rgb(35 42 49 / 0.1);
+  transform: rotate(-1.5deg);
+}
+
+.item:nth-child(even) .media {
+  transform: rotate(1.5deg);
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  height: 100%;
+  border: 0;
+  background: var(--butter);
+}
+
+.title {
+  margin-bottom: 4px;
+  font-size: var(--fs-h3-card);
+  line-height: 1.2;
+}
+
+.line {
+  color: var(--ink-2);
+}
+
+.link {
+  align-self: flex-start;
+  margin-top: 4px;
+  color: var(--ink);
+}
+
+@media (max-width: 1023px) {
+  .list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    margin-top: 64px;
+  }
+
+  .band {
+    padding-top: 32px;
+  }
+
+  .bandInner {
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  .heading {
+    margin-bottom: 8px;
+  }
+
+  .intro {
+    max-width: none;
+    font-size: 0.9375rem;
+  }
+
+  .list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding-top: 28px;
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr;
+    column-gap: 16px;
+    align-items: start;
+  }
+
+  .media {
+    grid-row: 1 / -1;
+    aspect-ratio: 1;
+    margin: 4px 0 0;
+    border-width: 4px;
+  }
+
+  .link {
+    justify-self: start;
+    margin-top: 0;
+  }
+}

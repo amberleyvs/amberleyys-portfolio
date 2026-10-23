@@ -1,0 +1,74 @@
+:root {
+  --ink: #232a31;
+  --ink-2: #3b444c;
+  --ink-3: #535c64;
+  --paper: #ffffff;
+  --white: #ffffff;
+  --card: #f4e6d1;
+  --card-2: #ecdbc3;
+  --line: #e2cdb2;
+
+  --blue: #557790;
+  --blue-dark: #3d5d73;
+  --yellow: #f5dc8c;
+  --butter: #fcf5df;
+  --butter-dark: #f7eccb;
+  --butter-line: #eadcb4;
+  --chip: #e6eef3;
+  --pink: #e6b2a6;
+  --pink-soft: #f2d4cc;
+
+  --illo-cream: #f6efdb;
+
+  --font-display: var(--font-inter-tight-face), system-ui, sans-serif;
+  --font-body: var(--font-dm-sans-face), system-ui, sans-serif;
+  --font-mono: var(--font-dm-mono-face), ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --fs-hero: clamp(3.5rem, 1.75rem + 8.5vw, 10rem);
+  --fs-h2: clamp(2.75rem, 2.1929rem + 2.2857vw, 4.25rem);
+  --fs-h2-work: clamp(2.375rem, 1.6786rem + 2.8571vw, 4.25rem);
+  --fs-h2-about: clamp(2.125rem, 1.4286rem + 2.8571vw, 4rem);
+  --fs-h2-band: clamp(2.125rem, 1.7071rem + 1.7143vw, 3.25rem);
+  --fs-h3-lg: clamp(1.875rem, 1.6429rem + 0.9524vw, 2.5rem);
+  --fs-h3: clamp(1.5rem, 1.3143rem + 0.7619vw, 2rem);
+  --fs-h3-card: clamp(1.375rem, 1.2357rem + 0.5714vw, 1.75rem);
+  --fs-lead: clamp(1.3125rem, 1.1964rem + 0.4762vw, 1.625rem);
+  --fs-body-lg: clamp(1.125rem, 1.0321rem + 0.381vw, 1.375rem);
+  --fs-body: clamp(1.0625rem, 1.0393rem + 0.0952vw, 1.125rem);
+  --fs-label: clamp(0.875rem, 0.8286rem + 0.1905vw, 1rem);
+  --fs-tag: 0.875rem;
+
+  --lh-body: 1.6;
+  --lh-tight: 0.92;
+  --ls-display: -0.04em;
+  --ls-heading: -0.03em;
+  --ls-title: -0.02em;
+
+  --content-max: 1280px;
+  --gutter: 40px;
+  --section-gap: 96px;
+  --nav-height: 68px;
+  --tap-min: 44px;
+
+  --border: 2px;
+  --border-thick: 3px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-hover: 0.3s;
+  --duration-reveal: 0.9s;
+  --reveal-distance: 24px;
+  --reveal-stagger: 120ms;
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --nav-height: 0px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --gutter: 16px;
+    --section-gap: 56px;
+  }
+}

@@ -1,0 +1,13 @@
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  background: var(--card-2);
+  border: var(--border) solid var(--ink);
+  color: var(--ink-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  text-align: center;
+}

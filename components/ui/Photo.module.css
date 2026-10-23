@@ -1,0 +1,21 @@
+.photo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-2);
+  border: var(--border) solid var(--ink);
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.placeholder {
+  padding: 16px;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  text-align: center;
+}

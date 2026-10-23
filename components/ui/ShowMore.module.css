@@ -1,0 +1,62 @@
+:global(.js) .collapsed [data-extra] {
+  display: none;
+}
+
+.expanded [data-first-extra]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :global(.js) .expanded [data-extra] {
+    animation: show-item var(--duration-reveal) var(--ease-out) both;
+  }
+}
+
+@keyframes show-item {
+  from {
+    opacity: 0;
+    transform: translateY(var(--reveal-distance));
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.toggle {
+  display: none;
+  margin-top: 28px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 1.125rem;
+}
+
+:global(.js) .toggle {
+  display: inline-flex;
+}
+
+.chevron {
+  transition: transform var(--duration-hover) var(--ease-out);
+}
+
+.up {
+  transform: rotate(180deg);
+}
+
+.toggle:hover > .chevron {
+  transform: translateY(2px);
+}
+
+.toggle:hover > .chevron.up {
+  transform: rotate(180deg) translateY(2px);
+}
+
+@media (max-width: 640px) {
+  .toggle {
+    margin-top: 24px;
+    font-size: 1.0625rem;
+  }
+}

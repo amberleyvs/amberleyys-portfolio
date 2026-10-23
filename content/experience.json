@@ -1,0 +1,78 @@
+{
+  "roles": [
+    {
+      "title": "Teaching Assistant - Foundations of Programming 1",
+      "org": "Faculty of Computer Science, Universitas Indonesia",
+      "start": "August 2026",
+      "end": null,
+      "points": [
+        "Assist lecturers in running a 2-hour weekly lab session for 55 students, working alongside 3 other TAs.",
+        "Grade weekly lab assignments and give students feedback.",
+        "Design problem sets that reinforce core programming concepts."
+      ]
+    },
+    {
+      "title": "AI Research Assistant",
+      "org": "Faculty of Computer Science, Universitas Indonesia",
+      "start": "August 2026",
+      "end": null,
+      "points": [
+        "Contribute to a research project on fall detection.",
+        "Review academic literature to identify relevant methods and findings for the project."
+      ]
+    },
+    {
+      "title": "Co-Project Director of SISTECH 2026",
+      "org": "RISTEK Fasilkom UI",
+      "start": "March 2026",
+      "end": null,
+      "points": [
+        "Co-lead the strategic planning and execution of SISTECH 2026, a women-in-tech development program.",
+        "Coordinate six technical and non-technical divisions to align program objectives and deliverables.",
+        "Developed program timelines, learning paths, and final project frameworks.",
+        "Manage stakeholder relations, recruitment processes, and operational planning."
+      ]
+    },
+    {
+      "title": "Vice-Manager of Partnerships",
+      "org": "COMPFEST",
+      "start": "March 2026",
+      "end": null,
+      "points": [
+        "Co-lead sponsorship and media partnership strategy for COMPFEST, overseeing PICs and staff across both workstreams.",
+        "Coordinate team execution to make sure partnership targets are met."
+      ]
+    },
+    {
+      "title": "Treasurer",
+      "org": "Google Developer Groups on Campus Universitas Indonesia (GDGoC UI)",
+      "start": "January 2026",
+      "end": "October 2026",
+      "points": [
+        "Managed budgeting, expense tracking, and financial reporting for organizational activities.",
+        "Coordinated budget allocation and reimbursement processes to support organizational events and operations."
+      ]
+    },
+    {
+      "title": "Business Growth and Partnerships Associate",
+      "org": "RISTEK Fasilkom UI",
+      "start": "March 2025",
+      "end": "February 2026",
+      "points": [
+        "Secured community and media partnerships for the SISTECH Program, supporting promotion and participant outreach.",
+        "Secured community and media partnerships for the Bikun Tracker Program to boost visibility and user engagement.",
+        "Managed Open Class BGP: secured speakers, organized webinars, and coordinated mentoring sessions."
+      ]
+    },
+    {
+      "title": "Community Partner",
+      "org": "Google Developer Groups on Campus Universitas Indonesia (GDGoC UI)",
+      "start": "November 2024",
+      "end": "November 2025",
+      "points": [
+        "Coordinated with 2 other GDGoC chapters to set up a hackathon.",
+        "Secured partnerships with 2 other communities to expand collaboration and event reach."
+      ]
+    }
+  ]
+}

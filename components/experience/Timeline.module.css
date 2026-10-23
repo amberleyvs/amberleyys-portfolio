@@ -1,0 +1,107 @@
+.timeline {
+  position: relative;
+  padding-left: 64px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 13px;
+  width: 8px;
+  background: var(--ink);
+}
+
+.entry {
+  position: relative;
+  padding-bottom: 48px;
+}
+
+.entry:last-child {
+  padding-bottom: 0;
+}
+
+.marker {
+  position: absolute;
+  top: 6px;
+  left: -64px;
+  width: 34px;
+  height: 34px;
+  border: 4px solid var(--ink);
+  border-radius: 50%;
+  background: var(--paper);
+}
+
+.markerLatest {
+  background: var(--blue);
+}
+
+.dates {
+  margin-bottom: 6px;
+  color: var(--blue-dark);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.title {
+  font-size: var(--fs-h3);
+  line-height: 1.15;
+}
+
+.org {
+  margin-top: 4px;
+  color: var(--ink-3);
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+}
+
+.points {
+  max-width: 640px;
+  margin: 12px 0 0;
+  padding-left: 1.1em;
+  list-style-type: disc;
+}
+
+.points li + li {
+  margin-top: 4px;
+}
+
+.points li::marker {
+  color: var(--blue-dark);
+}
+
+@media (max-width: 640px) {
+  .timeline {
+    padding-left: 48px;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .entry {
+    padding-bottom: 36px;
+  }
+
+  .marker {
+    top: 4px;
+    left: -48px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .dates {
+    margin-bottom: 2px;
+    font-size: 0.9375rem;
+  }
+
+  .org {
+    font-size: 0.875rem;
+  }
+
+  .points {
+    font-size: 1rem;
+  }
+}

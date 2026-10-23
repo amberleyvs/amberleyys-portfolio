@@ -1,0 +1,26 @@
+{
+  "name": "Hi, I'm Sisi!",
+  "url": "https://example.com",
+  "tagline": "Developer by practice, curious about pretty much everything. From tech to whatever rabbit hole i find myself in next!",
+  "city": "Depok, West Java",
+  "email": "amberleyvs@gmail.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/amberley-vidya-putri-91087a322",
+    "github": "https://github.com/amberleyvs",
+    "resume": "/resume.pdf"
+  },
+  "photo": {
+    "src": "/photo.jpg",
+    "alt": "Portrait of Amberley Vidya Putri",
+    "placeholder": "[Photo of Amberley]",
+    "caption": ""
+  },
+  "about": {
+    "paragraph": "I’m a third-year Computer Science student at Universitas Indonesia who loves building things with code and figuring out how they work. Outside of tech, i try to find new things to get into. This semester’s side quest? Accounting.",
+    "away": "I do it for the love of the game!"
+  },
+  "notFound": {
+    "image": null,
+    "alt": ""
+  }
+}

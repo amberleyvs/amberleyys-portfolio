@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "mysawit",
+    "title": "MySawit",
+    "type": "Web application",
+    "summary": "A web platform for managing palm oil plantation operations, from worker assignments and harvest reporting to delivery tracking and payments.",
+    "description": "MySawit connects plantation workers, supervisors, truck drivers, and administrators in one platform. Users can manage assignments, report harvest results, and track deliveries based on their roles. The platform uses a microservices architecture, allowing different services to be developed and maintained independently, with automated testing integrated into the development workflow.",
+    "role": "Project Manager, UI/UX Designer, Full-Stack Developer (Authentication & Plantation Modules), DevOps",
+    "tags": [
+      "Java",
+      "Spring Boot",
+      "Next.js",
+      "PostgreSQL"
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "/work/mysawit.mp4",
+        "preview": "/work/mysawit-preview.mp4",
+        "poster": "/work/mysawit-poster.png",
+        "alt": "Screen recording of MySawit, starting on the Harvest Review page"
+      }
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/advprog-2026-b7-project"
+      }
+    ]
+  },
+  {
+    "slug": "movezz",
+    "title": "Movezz",
+    "type": "Web & mobile application",
+    "summary": "A social platform for sports enthusiasts to share updates, connect with friends, trade sports equipment, and join sporting events.",
+    "description": "Movezz brings sports communities together through social feeds, user profiles, messaging, a built-in marketplace, and event registration. Developed by a team of five, the platform includes a Django web application and a Flutter app that share the same backend, keeping user data consistent across platforms. The project also features a complete UI/UX design in Figma, a promotional video, and an Android app.",
+    "role": "Full-Stack Developer",
+    "tags": [
+      "Django",
+      "Flutter",
+      "PostgreSQL",
+      "Figma"
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "/work/movezz.mp4",
+        "preview": "/work/movezz-preview.mp4",
+        "poster": "/work/movezz-poster.png",
+        "alt": "Movezz promotional video"
+      }
+    ],
+    "links": [
+      {
+        "label": "Web",
+        "url": "https://github.com/E1PBP/movezz"
+      },
+      {
+        "label": "Mobile",
+        "url": "https://github.com/E1PBP/movezz_mobile"
+      }
+    ]
+  },
+  {
+    "slug": "ride-hailing-platform",
+    "title": "Ride-Hailing Platform",
+    "type": "Web application",
+    "summary": "A simulated motorcycle taxi platform where passengers can book rides, drivers can manage requests, and administrators can monitor operations.",
+    "description": "The platform recreates the core features of an online motorcycle taxi service. Passengers can book rides, track their progress, and rate drivers, while drivers can accept requests and update ride statuses. Administrators can monitor ride statistics and driver ratings through a dashboard. The system also features Google sign-in, role-based access control, and protection against repeated failed login attempts.",
+    "role": "Back-End Developer (Ride History)",
+    "tags": [
+      "Python",
+      "Django",
+      "Google Authentication"
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "/work/ride-hailing.mp4",
+        "preview": "/work/ride-hailing-preview.mp4",
+        "poster": "/work/ride-hailing-poster.png",
+        "alt": "Screen recording of the ride-hailing platform, creating a new ride order"
+      }
+    ],
+    "links": [
+      {
+        "label": "GitLab",
+        "url": "https://gitlab.cs.ui.ac.id/pkpl26/41-dicarry-alvin-netsos/tugas-3-pkpl"
+      }
+    ]
+  }
+]

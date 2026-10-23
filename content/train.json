@@ -1,0 +1,45 @@
+{
+  "caption": "play with the cats ^^",
+  "cats": [
+    {
+      "name": "Mochi",
+      "file": "/cats/mochi.png",
+      "start": {
+        "zone": "window",
+        "window": 1
+      }
+    },
+    {
+      "name": "Miso",
+      "file": "/cats/miso.png",
+      "start": {
+        "zone": "window",
+        "window": 5
+      }
+    },
+    {
+      "name": "Biscuit",
+      "file": "/cats/biscuit.png",
+      "start": {
+        "zone": "roof",
+        "x": 900
+      }
+    },
+    {
+      "name": "Soot",
+      "file": "/cats/soot.png",
+      "start": {
+        "zone": "platform",
+        "x": 380
+      }
+    },
+    {
+      "name": "Patch",
+      "file": "/cats/patch.png",
+      "start": {
+        "zone": "platform",
+        "x": 1000
+      }
+    }
+  ]
+}

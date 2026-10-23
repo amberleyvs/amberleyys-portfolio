@@ -1,0 +1,181 @@
+.scene {
+  max-width: 1440px;
+  margin: 48px auto 0;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.platform {
+  fill: var(--card);
+}
+
+.ink {
+  stroke: var(--ink);
+}
+
+.car {
+  fill: var(--white);
+}
+
+.carOutline {
+  fill: none;
+  stroke: var(--ink);
+}
+
+.stripe {
+  fill: var(--blue);
+}
+
+.underframe {
+  fill: var(--ink);
+}
+
+.glass {
+  fill: var(--illo-cream);
+}
+
+.sill {
+  fill: var(--card-2);
+  stroke: var(--ink);
+}
+
+.wheel {
+  fill: var(--ink);
+}
+
+.hub {
+  fill: var(--card);
+}
+
+.frame {
+  fill: none;
+  stroke: var(--ink);
+}
+
+.highlight {
+  fill: none;
+  stroke: var(--pink);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :global(.js) .arrive {
+    animation: arrive 2.6s both paused;
+  }
+
+  :global(.js) .rolling .arrive {
+    animation-play-state: running;
+  }
+}
+
+@keyframes arrive {
+  0% {
+    transform: translate(-1320px, 0);
+    animation-timing-function: cubic-bezier(0.35, 0.45, 0.3, 1);
+  }
+
+  84% {
+    transform: translate(0, 0);
+    animation-timing-function: ease-in-out;
+  }
+
+  92% {
+    transform: translate(0, -2px);
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.cat {
+  cursor: grab;
+  touch-action: none;
+  transition: transform 0.55s cubic-bezier(0.3, 1.4, 0.5, 1);
+}
+
+.dragging {
+  cursor: grabbing;
+  transition: none;
+}
+
+.cat > g {
+  transition: transform var(--duration-hover) var(--ease-out);
+}
+
+.cat:hover > g {
+  transform: translateY(-6px);
+}
+
+.cat:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.focusRing {
+  display: none;
+  fill: none;
+}
+
+.focusRing rect:first-child {
+  stroke: var(--ink);
+}
+
+.focusRing rect:last-child {
+  stroke: var(--pink);
+}
+
+.cat:focus-visible .focusRing {
+  display: inline;
+}
+
+.standIn rect {
+  fill: var(--card-2);
+  stroke: var(--ink);
+}
+
+.standIn text {
+  fill: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 18px;
+}
+
+.caption {
+  margin-top: 12px;
+  color: var(--ink-3);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cat,
+  .cat > g {
+    transition: none;
+  }
+
+  .cat:hover > g {
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .scene {
+    margin-top: 28px;
+  }
+
+  .scroller {
+    overflow-x: auto;
+  }
+
+  .svg {
+    width: 720px;
+    max-width: none;
+  }
+}

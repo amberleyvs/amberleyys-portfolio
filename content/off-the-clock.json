@@ -1,0 +1,51 @@
+{
+  "intro": "",
+  "items": [
+    {
+      "id": "crosswalk",
+      "title": "crosswalk",
+      "line": "my familyy <33 place where they accept the best and worst version of me through serving, volunteering, worship, and laughter",
+      "media": {
+        "type": "image",
+        "src": "/off_work/crosswalk.jpg",
+        "alt": "The Crosswalk family posing together on stage after a Christmas service"
+      }
+    },
+    {
+      "id": "climbing",
+      "title": "climbs plastic rocks",
+      "line": "boulders religiously only on breaks and only if money is not a current issue",
+      "media": {
+        "type": "video",
+        "src": "/off_work/climb.mp4",
+        "poster": "/off_work/climb-poster.jpg",
+        "alt": "Me climbing an overhanging bouldering wall"
+      }
+    },
+    {
+      "id": "cats",
+      "title": "catss",
+      "line": "will always stop to look at a cat (can you tell I like mofusand?) #kucingkolongjembatan #jeff",
+      "media": {
+        "type": "video",
+        "src": "/off_work/cats.mp4",
+        "poster": "/off_work/cats-poster.jpg",
+        "alt": "Two cats sitting together on the pavement"
+      }
+    },
+    {
+      "id": "reading",
+      "title": "read",
+      "line": "currently on a reading slump hoping to make a comeback",
+      "link": {
+        "label": "My reading list",
+        "url": "https://amberleyvs.notion.site/Reading-List-69c95b24693c40b786b9df99040818b5"
+      },
+      "media": {
+        "type": "image",
+        "src": "/off_work/read.jpg",
+        "alt": "An open novel on my lap during a flight"
+      }
+    }
+  ]
+}

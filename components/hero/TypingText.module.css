@@ -1,0 +1,41 @@
+.rest {
+  visibility: hidden;
+}
+
+.caret {
+  display: none;
+  width: 2px;
+  height: 1.1em;
+  margin-right: -2px;
+  background: currentColor;
+  vertical-align: text-bottom;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :global(.js) .typing[data-state="waiting"] {
+    color: transparent;
+  }
+
+  :global(.js) .typing[data-state="typing"] .caret,
+  :global(.js) .typing[data-state="done"] .caret {
+    display: inline-block;
+  }
+
+  .typing[data-state="done"] .caret {
+    animation: caret-blink 1s steps(1) 3 forwards;
+  }
+}
+
+@keyframes caret-blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
