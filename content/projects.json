@@ -1,34 +1,5 @@
 [
   {
-    "slug": "mysawit",
-    "title": "MySawit",
-    "type": "Web application",
-    "summary": "A web platform for managing palm oil plantation operations, from worker assignments and harvest reporting to delivery tracking and payments.",
-    "description": "MySawit connects plantation workers, supervisors, truck drivers, and administrators in one platform. Users can manage assignments, report harvest results, and track deliveries based on their roles. The platform uses a microservices architecture, allowing different services to be developed and maintained independently, with automated testing integrated into the development workflow.",
-    "role": "Project Manager, UI/UX Designer, Full-Stack Developer (Authentication & Plantation Modules), DevOps",
-    "tags": [
-      "Java",
-      "Spring Boot",
-      "Next.js",
-      "PostgreSQL"
-    ],
-    "media": [
-      {
-        "type": "video",
-        "src": "/work/mysawit.mp4",
-        "preview": "/work/mysawit-preview.mp4",
-        "poster": "/work/mysawit-poster.jpg",
-        "alt": "Screen recording of MySawit, starting on the Harvest Review page"
-      }
-    ],
-    "links": [
-      {
-        "label": "GitHub",
-        "url": "https://github.com/advprog-2026-b7-project"
-      }
-    ]
-  },
-  {
     "slug": "movezz",
     "title": "Movezz",
     "type": "Web & mobile application",
@@ -86,6 +57,35 @@
       {
         "label": "GitLab",
         "url": "https://gitlab.cs.ui.ac.id/pkpl26/41-dicarry-alvin-netsos/tugas-3-pkpl"
+      }
+    ]
+  },
+  {
+    "slug": "mysawit",
+    "title": "MySawit",
+    "type": "Web application",
+    "summary": "A web platform for managing palm oil plantation operations, from worker assignments and harvest reporting to delivery tracking and payments.",
+    "description": "MySawit connects plantation workers, supervisors, truck drivers, and administrators in one platform. Users can manage assignments, report harvest results, and track deliveries based on their roles. The platform uses a microservices architecture, allowing different services to be developed and maintained independently, with automated testing integrated into the development workflow.",
+    "role": "Project Manager, UI/UX Designer, Full-Stack Developer (Authentication & Plantation Modules), DevOps",
+    "tags": [
+      "Java",
+      "Spring Boot",
+      "Next.js",
+      "PostgreSQL"
+    ],
+    "media": [
+      {
+        "type": "video",
+        "src": "/work/mysawit.mp4",
+        "preview": "/work/mysawit-preview.mp4",
+        "poster": "/work/mysawit-poster.jpg",
+        "alt": "Screen recording of MySawit, starting on the Harvest Review page"
+      }
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/advprog-2026-b7-project"
       }
     ]
   }
