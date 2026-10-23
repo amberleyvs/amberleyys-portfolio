@@ -67,7 +67,16 @@ export function TrainScene() {
   const wobbleRefs = useRef<(SVGGElement | null)[]>([]);
   const timers = useRef<number[]>([]);
   const reducedMotion = useRef(false);
-  const drag = useRef<{ cat: number; pointerId: number; startX: number; startY: number; moved: boolean } | null>(null);
+  const drag = useRef<{
+    cat: number;
+    pointerId: number;
+    toScene: DOMMatrix;
+    startX: number;
+    startY: number;
+    moved: boolean;
+    frame: number;
+    latest: { x: number; y: number };
+  } | null>(null);
 
   useEffect(() => {
     const query = window.matchMedia?.("(prefers-reduced-motion: reduce)");
@@ -110,6 +119,20 @@ export function TrainScene() {
     const timer = window.setTimeout(() => setArriving(false), ARRIVAL + 100);
     return () => window.clearTimeout(timer);
   }, [inView]);
+
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const onTouch = (event: TouchEvent) => {
+      if (drag.current || (event.target as Element).closest?.("[data-cat]")) event.preventDefault();
+    };
+    svg.addEventListener("touchstart", onTouch, { passive: false });
+    svg.addEventListener("touchmove", onTouch, { passive: false });
+    return () => {
+      svg.removeEventListener("touchstart", onTouch);
+      svg.removeEventListener("touchmove", onTouch);
+    };
+  }, []);
 
   useEffect(() => {
     const pending = timers.current;
@@ -169,10 +192,10 @@ export function TrainScene() {
     );
   };
 
-  const toScene = (event: PointerEvent) => {
-    const matrix = svgRef.current?.getScreenCTM();
-    if (!matrix) return { x: 0, y: 0 };
-    const point = new DOMPoint(event.clientX, event.clientY).matrixTransform(matrix.inverse());
+  const sceneMatrix = () => svgRef.current?.getScreenCTM()?.inverse() ?? new DOMMatrix();
+
+  const toScene = (event: PointerEvent, matrix: DOMMatrix = sceneMatrix()) => {
+    const point = new DOMPoint(event.clientX, event.clientY).matrixTransform(matrix);
     return { x: point.x, y: point.y };
   };
 
@@ -195,8 +218,18 @@ export function TrainScene() {
     if (!node) return;
     const index = Number(node.dataset.cat);
     event.preventDefault();
-    const point = toScene(event);
-    drag.current = { cat: index, pointerId: event.pointerId, startX: point.x, startY: point.y, moved: false };
+    const matrix = sceneMatrix();
+    const point = toScene(event, matrix);
+    drag.current = {
+      cat: index,
+      pointerId: event.pointerId,
+      toScene: matrix,
+      startX: point.x,
+      startY: point.y,
+      moved: false,
+      frame: 0,
+      latest: point,
+    };
     setDragging(index);
     setOrder((current) => [...current.filter((i) => i !== index), index]);
     updateCat(index, { zone: "drag", window: null, clipped: false, x: point.x, y: point.y + LIFT, scale: SCALE.lifted });
@@ -206,15 +239,22 @@ export function TrainScene() {
   const onPointerMove = (event: PointerEvent<SVGSVGElement>) => {
     const current = drag.current;
     if (!current || event.pointerId !== current.pointerId) return;
-    const point = toScene(event);
+    const point = toScene(event, current.toScene);
     if (Math.abs(point.x - current.startX) + Math.abs(point.y - current.startY) > 6) current.moved = true;
-    updateCat(current.cat, { x: clamp(point.x, 20, 1260), y: clamp(point.y + LIFT, -60, 330) });
-    setDropWindow(windowAt(point, current.cat));
+    current.latest = point;
+    if (current.frame) return;
+    current.frame = window.requestAnimationFrame(() => {
+      current.frame = 0;
+      const { x, y } = current.latest;
+      updateCat(current.cat, { x: clamp(x, 20, 1260), y: clamp(y + LIFT, -60, 330) });
+      setDropWindow(windowAt(current.latest, current.cat));
+    });
   };
 
   const onPointerUp = (event: PointerEvent<SVGSVGElement>) => {
     const current = drag.current;
     if (!current || event.pointerId !== current.pointerId) return;
+    window.cancelAnimationFrame(current.frame);
     drag.current = null;
     setDragging(null);
     setDropWindow(null);
@@ -231,7 +271,7 @@ export function TrainScene() {
       return;
     }
 
-    const point = toScene(event);
+    const point = toScene(event, current.toScene);
     const slot = windowAt(point, index);
     if (slot !== null) moveTo(index, { zone: "window", window: slot });
     else if (point.y < 28) moveTo(index, { zone: "roof", x: point.x });

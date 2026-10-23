@@ -103,14 +103,17 @@
 .dragging {
   cursor: grabbing;
   transition: none;
+  will-change: transform;
 }
 
 .cat > g {
   transition: transform var(--duration-hover) var(--ease-out);
 }
 
-.cat:hover > g {
-  transform: translateY(-6px);
+@media (hover: hover) {
+  .cat:hover > g {
+    transform: translateY(-6px);
+  }
 }
 
 .cat:focus-visible {
