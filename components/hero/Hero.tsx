@@ -12,7 +12,7 @@ export function Hero() {
     <section id="home" aria-label="Introduction">
       <div className={`container ${styles.grid}`}>
         <div>
-          <h1 className={styles.title}>{site.name}</h1>
+          <h1 className={styles.title}>{site.greeting}</h1>
           <TypingText className={styles.lead} text={site.tagline} />
           <div className={styles.actions}>
             <a className="btn btn--primary" href="#work">

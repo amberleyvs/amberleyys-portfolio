@@ -4,11 +4,13 @@ import site from "../../content/site.json" with { type: "json" };
 test.skip(({ isMobile }) => isMobile, "desktop only");
 
 test("Home has title, description, canonical and preview tags", async ({ page }) => {
-  const title = `${site.name}, developer`;
+  const title = `${site.name} · Developer`;
   await page.goto("/");
   await expect(page).toHaveTitle(title);
-  await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /.{40,}/);
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /^https?:\/\/[^/]+\/?$/);
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", site.description);
+  const canonical = await page.locator('link[rel="canonical"]').getAttribute("href");
+  expect(new URL(canonical!).toString()).toBe(new URL("/", site.url).toString());
+  await expect(page.locator('meta[property="og:description"]')).toHaveAttribute("content", site.description);
   await expect(page.locator('meta[property="og:title"]')).toHaveAttribute("content", title);
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", /\/og\.png$/);
   await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");

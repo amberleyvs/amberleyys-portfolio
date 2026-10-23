@@ -33,14 +33,12 @@ export async function loadFonts(specs: FontSpec[]) {
 
 type CardProps = {
   label: string;
-  title: string | string[];
+  title: string;
   body: string;
   big?: boolean;
 };
 
 export function OgCard({ label, title, body, big = false }: CardProps) {
-  const lines = Array.isArray(title) ? title : [title];
-
   return (
     <div
       style={{
@@ -66,11 +64,7 @@ export function OgCard({ label, title, body, big = false }: CardProps) {
             letterSpacing: big ? -5 : -3,
           }}
         >
-          {lines.map((line) => (
-            <div key={line} style={{ display: "flex" }}>
-              {line}
-            </div>
-          ))}
+          {title}
         </div>
         <div
           style={{

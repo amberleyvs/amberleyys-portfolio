@@ -7,7 +7,7 @@ describe("Home page", () => {
     render(<Home />);
     const headings = screen.getAllByRole("heading", { level: 1 });
     expect(headings).toHaveLength(1);
-    expect(headings[0]).toHaveTextContent(site.name);
+    expect(headings[0]).toHaveTextContent(site.greeting);
   });
 
   it("has the sections in the design's order", () => {

@@ -15,7 +15,7 @@ All text lives in `content/`, so most updates don't touch code.
 
 | File | Holds |
 | --- | --- |
-| `site.json` | Name, tagline, links, photo, About text, 404 picture |
+| `site.json` | Name, greeting, tagline, live URL, search and link-preview description, links, photo, About text, 404 picture |
 | `experience.json` | Roles, newest first |
 | `projects.json` | Projects, their repo links and media |
 | `off-the-clock.json` | Off the clock items and their media |
@@ -36,7 +36,7 @@ components/
   off-the-clock/
   ui/           Shared pieces: icons, photo, video, placeholder, See more
 content/        JSON for all text and media paths
-lib/            Typed content loader, page metadata, nav helpers
+lib/            Typed content loader, link-preview image, nav helpers
 public/         Images, videos, resume
 styles/         Design tokens and global styles
 tests/          Vitest unit tests and Playwright browser tests

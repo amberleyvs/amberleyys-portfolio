@@ -6,7 +6,9 @@ import trainData from "@/content/train.json";
 
 type Site = {
   name: string;
+  greeting: string;
   url: string;
+  description: string;
   tagline: string;
   city: string;
   email: string;
