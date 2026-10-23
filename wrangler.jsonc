@@ -2,6 +2,10 @@
   "name": "amberleyys-portfolio",
   "main": "worker.js",
   "compatibility_date": "2026-10-01",
+  "routes": [
+    { "pattern": "amberleyys.com", "custom_domain": true },
+    { "pattern": "www.amberleyys.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./out",
     "binding": "ASSETS",
